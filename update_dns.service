@@ -1,0 +1,13 @@
+[Unit]
+Description=Update Cloudflare DNS Records
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/dns_update
+ExecStart=/opt/dns_update/update_cloudflare_zone.sh
+
+[Install]
+WantedBy=multi-user.target
