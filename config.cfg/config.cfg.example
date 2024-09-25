@@ -1,0 +1,7 @@
+TOKEN="secret_token"
+
+declare -A DOMAINS
+DOMAINS=(
+    ["subdomain.domain.com"]="zone_name"
+    [cdomain.com"]="zone_name"
+)
