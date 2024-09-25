@@ -31,8 +31,7 @@ for DOMAIN in "${!DOMAINS[@]}"
 do
     ZONE_NAME="${DOMAINS[$DOMAIN]}"
     echo "Processing domain: $DOMAIN with zone: $ZONE_NAME"
-
-    # Получение Zone ID
+    
     ZONE_ID=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=$ZONE_NAME" \
     -H "Authorization: Bearer $TOKEN" \
     -H "Content-Type: application/json" | jq -r '.result[0].id')
