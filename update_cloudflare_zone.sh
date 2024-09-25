@@ -14,7 +14,6 @@ if [ -z "$PUBLIC_IP" ]; then
     exit 1
 fi
 
-# Объявление ассоциативного массива DOMAINS
 declare -A DOMAINS
 
 source config.cfg
