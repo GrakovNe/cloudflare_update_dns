@@ -1,0 +1,10 @@
+[Unit]
+Description=Run update_dns.service every 30 minutes and at startup
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
